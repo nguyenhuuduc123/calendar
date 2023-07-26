@@ -1,0 +1,432 @@
+.calendar {
+  display: flex;
+  height: 103vh;
+  margin: auto;
+  --primary-color: #ffffff;
+  --secondary-color: #4d76fd;
+  --text-color: #979dc3;
+}
+/* common button */
+.btn {
+  max-width: 200px;
+  padding: 10px 16px;
+  font-size: 12px;
+  margin-left: 10px;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  border: 1px solid #a1a4b9;
+}
+
+/* end common */
+.calendar_main {
+  justify-content: space-between;
+  width: 75%;
+  height: 100%;
+  background-color: var(--primary-color);
+  overflow: visible;
+}
+.calendar_main_header {
+  padding: 18px 20px 0;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  border-bottom: 1px solid #e5e4e9;
+}
+.calendar_header_rContent {
+  min-width: 50px;
+}
+.calendar_header_rContent i {
+  margin-right: 5px;
+}
+.calendar_header_rContent input {
+  background-color: transparent;
+  border: none;
+  max-width: 70px;
+}
+.calendar_header_content {
+  padding-right: 100px;
+  font-weight: 600;
+}
+.calendar_navigation {
+  width: 25%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+/* main content */
+.calendar_main_content {
+  padding: 10px 20px;
+  background-color: #f0f0f7;
+}
+.main_content_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keep_button {
+  margin-left: 25px;
+  max-width: 200px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid blue;
+
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.keep_button p.month::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 100%;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  left: 54px;
+}
+
+.keep_button p {
+  background-color: #f0f0f7;
+  padding: 9px 10px;
+
+  color: blue;
+  overflow: hidden;
+  font-size: 14px;
+}
+.keep_button .week {
+  background-color: blue;
+  color: white;
+}
+.keep_button .month {
+  background-color: whitesmoke;
+  color: blue;
+}
+.main_content_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.date_choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  padding-left: 50px;
+}
+.date_choice p {
+  font-weight: 600;
+  color: #979dc3;
+}
+.date_choice_top {
+  width: 150px;
+  display: flex;
+  justify-content: space-around;
+}
+.date_choice_bottom {
+  margin-top: 5px;
+}
+/* weekends add task */
+.main_content_right {
+  display: flex;
+  justify-content: space-around;
+}
+/* common button */
+
+.btn_add_task {
+  margin-right: 25px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 12px;
+}
+.btn_weekend {
+  background-color: #f0f0f7;
+  color: #a1a4b9;
+}
+/* footer */
+.footer {
+  width: 100%;
+  height: 78vh;
+  background-color: #f0f0f7;
+}
+.footer_content {
+  width: 95%;
+  height: 75vh;
+  margin: 20px auto 0;
+  background-color: blue;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: black;
+}
+.footer_content .footer_day {
+  height: 15%;
+}
+.footer_day {
+  display: flex;
+  align-items: center;
+  border: 1px solid #cbcfe0;
+  border-radius: 5px 5px 0 0;
+}
+.footer_day_detail {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25px;
+  font-size: 12px;
+  color: var(--text-color);
+  border-left: 1px solid #cbcfe0;
+
+  color: black;
+}
+.footer_day_detail:last-child {
+  border-right: none;
+}
+.footer_day_detail:first-child {
+  border-left: none;
+}
+.footer_day_content {
+  height: 17%;
+  display: flex;
+  border-bottom: 1px solid #cbcfe0;
+  position: relative;
+}
+.footer_content_detail {
+  width: 20%;
+  height: 100%;
+  text-align: center;
+  padding-top: 25px;
+  border-left: 1px solid #cbcfe0;
+  color: #f5eafd;
+  position: relative;
+}
+.footer_content_detail h1 {
+  font-size: 14px;
+  font-weight: 800;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #1b1f59;
+}
+.footer_content_detail li {
+  font-size: 10px;
+  max-width: 150px;
+  color: purple;
+  padding: 2px 0;
+  position: relative;
+}
+.footer_content_detail li::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #b86df7;
+  position: absolute;
+  left: -5px;
+  top: 3.5px;
+}
+.footer_content_detail ul {
+  padding-top: 5px;
+  margin-left: 20px;
+}
+.footer_content_detail:last-child {
+  border-right: 1px solid #cbcfe0;
+}
+.footer_day_detail:first-child {
+  border-left: none;
+}
+.footer_day_content {
+  border-radius: 5px;
+}
+/* navigation */
+.calendar_navigation_header {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  border-bottom: 2px solid #e5e4e9;
+  text-align: center;
+  align-items: center;
+  color: #979dc3;
+  font-size: 15px;
+  padding-top: 15px;
+}
+.calendar_navigation_content {
+  height: calc((100vh - 60px) / 2);
+  border-bottom: 2px solid #cbcfe0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.calendar_navigation_content h2 {
+  padding-top: 10px;
+  font-weight: 700;
+}
+.calendar_navigation_content p {
+  padding-top: 3px;
+  font-size: 10px;
+  color: #a1a4b9;
+}
+.calendar_navigation_avatar {
+  vertical-align: middle;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.calendar_icons {
+  margin-top: 15px;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+}
+.calendar_icons i {
+  color: var(--secondary-color);
+}
+.calendar_icon {
+  display: inline-block;
+  background-color: var(--primary-color);
+  margin: 0 20px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background-color: #eaeefc;
+  position: relative;
+}
+.calendar_icon::after {
+  content: "1";
+  text-align: center;
+  padding: 4px;
+  font-size: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-color);
+  position: absolute;
+  border-radius: 999px;
+  background-color: #ff537b;
+  border: 1px solid #e5e4e9;
+  top: -10px;
+  left: 15px;
+}
+/* complete_percent */
+.complete_percent {
+  width: 80%;
+  margin: 10px auto 0;
+  height: 7px;
+
+  background-color: whitesmoke;
+  border-radius: 50px;
+  position: relative;
+}
+.complete {
+  width: 50%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 50px 0 0 50px;
+}
+.complete_percent::after {
+  content: "12/34";
+  font-size: 7px;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+}
+.task_percent {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.task_percent h2 {
+  margin: 3px auto;
+}
+.task_percent div {
+  width: 90px;
+}
+.body_content {
+  margin-top: 10px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #cbcfe0;
+}
+.body_content h1 {
+  padding-left: 20px;
+  margin: 0px 0;
+  font-size: 20px;
+  font-weight: 700;
+  font-size: 15px;
+}
+.body_content p {
+  margin-top: 2px;
+  padding: 7px 0px 6px 40px;
+  font-size: 12px;
+  position: relative;
+}
+.body_content p::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background-color: white;
+  border: 3px solid black;
+  position: absolute;
+  left: 20px;
+  top: 7px;
+}
+.display_member {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.display_member h1 {
+  margin-left: 40px;
+  font-weight: 700;
+}
+.display_member ul {
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.calendar_navigation_member {
+  vertical-align: middle;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+/* animation  */
+.active:hover {
+  background-color: #b86df7;
+  color: #783cae;
+  overflow: visible;
+  z-index: 2;
+  transform: scale(1.3);
+  border: 0;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    to top,
+    #6625dc,
+    #7739e3,
+    #874cea,
+    #965df1,
+    #a46ef8
+  );
+  color: #fff;
+  font-size: 20px;
+}
+.left_style {
+  border-left: 3px solid #b86df7;
+}
+.set {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  background-color: red;
+  top: -500px;
+}
